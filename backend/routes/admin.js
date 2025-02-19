@@ -3,9 +3,9 @@ const {
   getDashboardData,
   getAllUsers,
   getAllJobs,
-} = require("../controllers/adminController");
-const authMiddleware = require("../middleware/authMiddleware");
-const { isAdmin } = require("../middleware/roleMiddleware");
+} = require("../controller/adminController");
+const authMiddleware = require("../middleware/auth");
+const { isAdmin } = require("../middleware/role");
 
 const router = express.Router();
 

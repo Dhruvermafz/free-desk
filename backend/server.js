@@ -4,12 +4,12 @@ const cors = require("cors");
 require("dotenv").config();
 const http = require("http"); // Add the missing import for http
 const { Server } = require("socket.io"); // Add the missing import for Server (Socket.IO)
-const notificationRoutes = require("./routes/notificationRoutes");
-const paymentRoutes = require("./routes/paymentRoutes");
-const authRoutes = require("./routes/authRoutes");
-const jobRoutes = require("./routes/jobRoutes");
-const applicationRoutes = require("./routes/applicationRoutes");
-const adminRoutes = require("./routes/adminRoutes");
+const notificationRoutes = require("./routes/notification");
+const paymentRoutes = require("./routes/payment");
+const authRoutes = require("./routes/auth");
+const jobRoutes = require("./routes/jobs");
+const applicationRoutes = require("./routes/application");
+const adminRoutes = require("./routes/admin");
 const app = express();
 
 // Create the HTTP server

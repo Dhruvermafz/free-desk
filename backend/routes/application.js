@@ -2,8 +2,8 @@ const express = require("express");
 const {
   applyForJob,
   acceptBid,
-} = require("../controllers/applicationController");
-const authMiddleware = require("../middleware/authMiddleware");
+} = require("../controller/applicationController");
+const authMiddleware = require("../middleware/auth");
 
 const router = express.Router();
 
