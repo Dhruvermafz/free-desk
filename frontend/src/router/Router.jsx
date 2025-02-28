@@ -10,11 +10,13 @@ import SettingsTabs from "../components/Settings/SettingsTabs";
 import JobApplication from "../components/Jobs/JobApplication";
 import UsersList from "../components/Users/UsersList";
 import SearchJobs from "../components/Jobs/SearchJobs";
+import UserDetails from "../components/Profile/UserDetails";
 const { BrowserRouter, Routes, Route } = ReactRouter;
 // Public routes array
 const publicRoutes = [
   { path: "/", element: <JobsList /> },
   { path: "/add-job", element: <AddJob /> },
+  { path: "/u/:id", element: <UserDetails /> },
   { path: "/login", element: <Login /> },
   { path: "/signup", element: <Signup /> },
   { path: "/*", element: <Error /> },

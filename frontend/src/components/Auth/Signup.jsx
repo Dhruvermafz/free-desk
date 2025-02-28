@@ -1,5 +1,5 @@
 import React, { useState } from "react";
-
+import svg from "../../images/undraw-remotely.svg";
 const API_URL = "API_URL/auth/signup";
 
 const Signup = () => {
@@ -84,11 +84,7 @@ const Signup = () => {
         <form onSubmit={handleSubmit} className="card card-item">
           <div className="card-body row p-0">
             <div className="col-lg-6 d-flex align-items-center justify-content-center border-right">
-              <img
-                src="images/undraw-remotely.svg"
-                alt="Signup"
-                className="img-fluid"
-              />
+              <img src={svg} alt="Signup" className="img-fluid" />
             </div>
 
             <div className="col-lg-5 mx-auto">

@@ -8,14 +8,14 @@ import * as ReactRouter from "react-router-dom";
 const { BrowserRouter, Routes, Route } = ReactRouter;
 function App() {
   return (
-    <>
+    <body>
       <BrowserRouter>
         <Preloader />
         <Header />
         <Router />
         <Footer />
       </BrowserRouter>
-    </>
+    </body>
   );
 }
 

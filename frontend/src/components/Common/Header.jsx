@@ -1,5 +1,14 @@
 import React from "react";
 import logo from "../../img/logo_white.jpg";
+import { IoMdSearch } from "react-icons/io";
+import { FaBars } from "react-icons/fa";
+import { CiLogout, CiUser } from "react-icons/ci";
+import { FaBell } from "react-icons/fa";
+import { CiSettings } from "react-icons/ci";
+import { IoMdLogOut } from "react-icons/io";
+import { FaTimes } from "react-icons/fa";
+import { FaSign } from "react-icons/fa";
+
 const Header = () => {
   return (
     <header className="header-area bg-white border-bottom border-bottom-gray">
@@ -7,7 +16,7 @@ const Header = () => {
         <div className="row align-items-center">
           <div className="col-lg-2">
             <div className="logo-box">
-              <a href="index.html" className="logo">
+              <a href="/" className="logo">
                 <img src={logo} style={{ width: "50%" }} alt="logo" />
               </a>
               <div className="user-action">
@@ -17,7 +26,7 @@ const Header = () => {
                   data-placement="top"
                   title="Search"
                 >
-                  <i className="la la-search"></i>
+                  <IoMdSearch />
                 </div>
                 <div
                   className="off-canvas-menu-toggle icon-element icon-element-xs shadow-sm me-1"
@@ -25,7 +34,7 @@ const Header = () => {
                   data-placement="top"
                   title="Main menu"
                 >
-                  <i className="la la-bars"></i>
+                  <FaBars />
                 </div>
                 <div
                   className="user-off-canvas-menu-toggle icon-element icon-element-xs shadow-sm"
@@ -33,7 +42,7 @@ const Header = () => {
                   data-placement="top"
                   title="User menu"
                 >
-                  <i className="la la-user"></i>
+                  <CiUser />
                 </div>
               </div>
             </div>
@@ -50,7 +59,7 @@ const Header = () => {
                     placeholder="Type your search words..."
                   />
                   <button className="form-btn" type="button">
-                    <i className="la la-search"></i>
+                    <IoMdSearch />
                   </button>
                 </div>
               </form>
@@ -67,7 +76,7 @@ const Header = () => {
                       aria-haspopup="true"
                       aria-expanded="false"
                     >
-                      <i className="la la-bell"></i>
+                      <FaBell />
                     </a>
                     <div
                       className="dropdown-menu dropdown--menu dropdown-menu-right mt-3 keep-open"
@@ -89,36 +98,6 @@ const Header = () => {
                               </h5>
                               <small className="meta d-block lh-24">
                                 <span>45 secs ago</span>
-                              </small>
-                            </div>
-                          </div>
-                        </a>
-                        <a className="dropdown-item" href="notifications.html">
-                          <div className="media media-card media--card shadow-none mb-0 rounded-0 align-items-center bg-transparent">
-                            <div className="media-img media-img-sm flex-shrink-0">
-                              <img src="images/img4.jpg" alt="avatar" />
-                            </div>
-                            <div className="media-body p-0 border-left-0">
-                              <h5 className="fs-14 fw-regular">
-                                Arnold Smith answered on your post
-                              </h5>
-                              <small className="meta d-block lh-24">
-                                <span>5 mins ago</span>
-                              </small>
-                            </div>
-                          </div>
-                        </a>
-                        <a className="dropdown-item" href="notifications.html">
-                          <div className="media media-card media--card shadow-none mb-0 rounded-0 align-items-center bg-transparent">
-                            <div className="media-img media-img-sm flex-shrink-0">
-                              <img src="images/img4.jpg" alt="avatar" />
-                            </div>
-                            <div className="media-body p-0 border-left-0">
-                              <h5 className="fs-14 fw-regular">
-                                Saeed bookmarked your post
-                              </h5>
-                              <small className="meta d-block lh-24">
-                                <span>1 hour ago</span>
                               </small>
                             </div>
                           </div>
@@ -163,20 +142,21 @@ const Header = () => {
                       <h6 className="dropdown-header">Hi, Arden Smith</h6>
                       <div className="dropdown-divider border-top-gray mb-0"></div>
                       <div className="dropdown-item-list">
-                        <a className="dropdown-item" href="user-profile.html">
-                          <i className="la la-user me-2"></i>Profile
+                        <a className="dropdown-item" href="/u/:id">
+                          <CiUser className="me-2" />
+                          Profile
                         </a>
-                        <a className="dropdown-item" href="notifications.html">
-                          <i className="la la-bell me-2"></i>Notifications
+                        <a className="dropdown-item" href="/notifications">
+                          <FaBell className="me-2" />
+                          Notifications
                         </a>
-                        <a className="dropdown-item" href="referrals.html">
-                          <i className="la la-user-plus me-2"></i>Referrals
+
+                        <a className="dropdown-item" href="/settings">
+                          <CiSettings className="me-2" /> Settings
                         </a>
-                        <a className="dropdown-item" href="setting.html">
-                          <i className="la la-gear me-2"></i>Settings
-                        </a>
-                        <a className="dropdown-item" href="index.html">
-                          <i className="la la-power-off me-2"></i>Log out
+                        <a className="dropdown-item" href="#">
+                          <IoMdLogOut className="me-2" />
+                          Log out
                         </a>
                       </div>
                     </div>
@@ -194,19 +174,19 @@ const Header = () => {
           data-placement="left"
           title="Close menu"
         >
-          <i className="la la-times"></i>
+          <FaTimes />
         </div>
 
         <div className="off-canvas-btn-box px-4 pt-5 text-center">
           <a
-            href="login.html"
+            href="/login"
             className="btn theme-btn theme-btn-sm theme-btn-outline"
           >
-            <i className="la la-sign-in me-1"></i> Login
+            Login
           </a>
           <span className="fs-15 fw-medium d-inline-block mx-2">Or</span>
-          <a href="signup.html" className="btn theme-btn theme-btn-sm">
-            <i className="la la-plus me-1"></i> Sign up
+          <a href="/signup" className="btn theme-btn theme-btn-sm">
+            Sign up
           </a>
         </div>
       </div>
@@ -217,7 +197,7 @@ const Header = () => {
           data-placement="left"
           title="Close menu"
         >
-          <i className="la la-times"></i>
+          <FaTimes />
         </div>
         <ul
           className="nav nav-tabs generic-tabs generic--tabs pt-90px ps-4 shadow-sm"
@@ -263,7 +243,7 @@ const Header = () => {
           >
             <div className="dropdown--menu shadow-none w-auto rounded-0">
               <div className="dropdown-item-list">
-                <a className="dropdown-item" href="notifications.html">
+                <a className="dropdown-item" href="/notifications">
                   <div className="media media-card media--card shadow-none mb-0 rounded-0 align-items-center bg-transparent">
                     <div className="media-img media-img-sm flex-shrink-0">
                       <img src="images/img3.jpg" alt="avatar" />
@@ -278,40 +258,10 @@ const Header = () => {
                     </div>
                   </div>
                 </a>
-                <a className="dropdown-item" href="notifications.html">
-                  <div className="media media-card media--card shadow-none mb-0 rounded-0 align-items-center bg-transparent">
-                    <div className="media-img media-img-sm flex-shrink-0">
-                      <img src="images/img4.jpg" alt="avatar" />
-                    </div>
-                    <div className="media-body p-0 border-left-0">
-                      <h5 className="fs-14 fw-regular">
-                        Arnold Smith answered on your post
-                      </h5>
-                      <small className="meta d-block lh-24">
-                        <span>5 mins ago</span>
-                      </small>
-                    </div>
-                  </div>
-                </a>
-                <a className="dropdown-item" href="notifications.html">
-                  <div className="media media-card media--card shadow-none mb-0 rounded-0 align-items-center bg-transparent">
-                    <div className="media-img media-img-sm flex-shrink-0">
-                      <img src="images/img4.jpg" alt="avatar" />
-                    </div>
-                    <div className="media-body p-0 border-left-0">
-                      <h5 className="fs-14 fw-regular">
-                        Saeed bookmarked your post
-                      </h5>
-                      <small className="meta d-block lh-24">
-                        <span>1 hour ago</span>
-                      </small>
-                    </div>
-                  </div>
-                </a>
               </div>
               <a
                 className="dropdown-item border-bottom-0 text-center btn-text fw-regular"
-                href="notifications.html"
+                href="/notifications"
               >
                 View All Notifications{" "}
                 <i className="la la-arrow-right icon ms-1"></i>
@@ -327,19 +277,19 @@ const Header = () => {
             <div className="dropdown--menu shadow-none w-auto rounded-0">
               <div className="dropdown-item-list">
                 <a className="dropdown-item" href="user-profile.html">
-                  <i className="la la-user me-2"></i>Profile
+                  <CiUser /> Profile
                 </a>
                 <a className="dropdown-item" href="notifications.html">
-                  <i className="la la-bell me-2"></i>Notifications
+                  <FaBell /> Notifications
                 </a>
-                <a className="dropdown-item" href="referrals.html">
-                  <i className="la la-user-plus me-2"></i>Referrals
-                </a>
+
                 <a className="dropdown-item" href="setting.html">
-                  <i className="la la-gear me-2"></i>Settings
+                  <CiSettings />
+                  Settings
                 </a>
                 <a className="dropdown-item" href="index.html">
-                  <i className="la la-power-off me-2"></i>Log out
+                  <CiLogout />
+                  Log out
                 </a>
               </div>
             </div>
