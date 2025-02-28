@@ -10,7 +10,6 @@ function App() {
   return (
     <body>
       <BrowserRouter>
-        <Preloader />
         <Header />
         <Router />
         <Footer />
